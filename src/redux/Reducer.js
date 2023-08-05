@@ -19,6 +19,9 @@ const appReducerSlice = createSlice({
         addResume: (state, action) => {
             state.resume = action.payload;
         },
+        removeResume: (state, action) => {
+            state.resume = null
+        },
         addAbout: (state, action) => {
             state.about = action.payload.about;
             state.bloodGroup = action.payload.bloodGroup;
@@ -38,5 +41,5 @@ const appReducerSlice = createSlice({
 
     }
 })
-export const { addAbout, addSkills, addEthicalCount, addResume } = appReducerSlice.actions
+export const { addAbout, addSkills, addEthicalCount, addResume, removeResume } = appReducerSlice.actions
 export default appReducerSlice
