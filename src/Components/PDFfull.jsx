@@ -33,8 +33,9 @@ const PDFfull = () => {
     }
     return (
         <div>
+
             {file && (
-                <div style={{ width: '375px', height: '100px', margin: 'auto', marginTop: '30px' }}>
+                <div style={{ width: '375px', height: '100px', margin: 'auto', marginTop: '30px', background: 'white' }}>
                     <h3>{file.name}</h3>
                     <Document file={file} onLoadSuccess={onDocumentLoadSuccess}>
                         <Page renderTextLayer={false} pageNumber={pageNumber} onClick={handleOnClick} width={375} />
